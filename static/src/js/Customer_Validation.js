@@ -16,12 +16,20 @@ odoo.define("pos_order.inherit", function (require) {
             title: "Customer Error",
             body: `Select a customer.`,
           });
-        } else if (this.env.pos.get_order().location == undefined) {
+        } 
+        else if (this.env.pos.get_order().location == undefined) {
           Gui.showPopup("ErrorPopup", {
             title: "Shipping Location Error",
             body: `Select a shipping location.`,
           });
         } 
+
+
+
+
+
+
+        
         else if (this.env.pos.get_order().orderlines.length <= 0) {
             // Gui.showPopup("ErrorPopup", {
             //   title: "Product Error",
