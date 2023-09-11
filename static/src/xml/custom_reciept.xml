@@ -19,14 +19,15 @@
         <xpath expr="//div[hasclass('pos-receipt-contact')]" position="inside">
             <div style="font-weight:bold;"> <u>Customer details:</u>  
                 <div>              
-                    Customer: <t t-esc='receipt.partner.name' /> <br/>
+                    Customer: <t t-out='receipt.partner.name' /> <br/>
                         <t t-if="receipt.partner.customer_phone_number">
-                        Phone: <t t-esc='receipt.partner.customer_phone_number' />
+                        Phone: <t t-out='receipt.partner.customer_phone_number' />
                     </t>
                     <t t-else="">
                         Phone: NA
                     </t><br/>
-                    Shipping Location: <t t-out="receipt.location"/>
+                    Shipping Location: <t t-out="receipt.location"/><br />
+                    -------------------------------
                 </div>
             </div>
         </xpath> 
