@@ -1,0 +1,24 @@
+.qty_product{
+    background-color: lightblue;
+    position: absolute;
+    top: 0;
+    right: 0;
+    text-align: end;
+    font-size:small;
+    font-weight: 700;
+    padding: 5px;
+}
+
+.instock{
+    background-color: lightgreen;
+    color: green;
+}
+
+.outofstock{
+    background-color: lightcoral;
+    color: darkred;
+}
+
+.product{
+    border: 1px solid black;
+}

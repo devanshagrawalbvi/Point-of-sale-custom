@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="location_f_data" model="ir.ui.view">
+        <field name="name">pos_task.locations</field>
+        <field name="model">pos_task.locations</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <field name="locations" />
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="location_t_data" model="ir.ui.view">
+        <field name="name">pos_task.locations</field>
+        <field name="model">pos_task.locations</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="locations" />
+            </tree>
+        </field>
+    </record>
+
+    <record
+        id="action_location" model="ir.actions.act_window">
+        <field name="name">Location</field>
+        <field name="res_model">pos_task.locations</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+</odoo>

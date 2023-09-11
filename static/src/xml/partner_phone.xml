@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates id="template" xml:space="preserve">
+
+    <!-- Code for showing contact field in form -->
+
+    <t t-name="pos_training.CustomerMobile" t-inherit="point_of_sale.PartnerDetailsEdit" t-inherit-mode="extension" owl="1">
+        <xpath expr="//div[hasclass('partner-details-left')]" position="inside">
+            <div class="partner-detail">
+                <span class="label">Contact</span>
+                <input class="detail" id="customer_phone_number" t-model="changes.customer_phone_number" t-on-change="captureChange" />
+            </div>
+        </xpath>
+    </t>
+
+    <!-- Code for showing contact in list heading-->
+
+    <t t-name="pos_training.CustomerList" t-inherit="point_of_sale.PartnerListScreen" t-inherit-mode="extension" owl="1">
+        <xpath expr="//table[hasclass('partner-list')]//tr//th[2]" position="after">
+            <th>Contact Number</th>
+        </xpath>
+    </t>
+
+    <!-- Code for showing contact field data in list -->
+
+    <t t-name="pos_training.CustomerLine" t-inherit="point_of_sale.PartnerLine" t-inherit-mode="extension" owl="1">
+        <xpath expr="//tr//td[2]" position="after">
+            <t t-if="props.partner.customer_phone_number" t-out="props.partner.customer_phone_number"/>
+            <t t-else=""> --- </t>
+        </xpath>
+    </t>
+</templates>

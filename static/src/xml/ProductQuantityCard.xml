@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates id="template" xml:space="preserve">
+    <t t-name="ProductCard" t-inherit="point_of_sale.ProductItem" t-inherit-mode="extension" owl="1">
+        <xpath expr="//article[hasclass('product')]" position="inside">
+            <div class="qty_product" t-att-class="{'instock': props.product.qty_available &gt; 0, 'outofstock': props.product.qty_available &lt;= 0}">
+                <t t-out="props.product.qty_available"/>
+            </div>
+        </xpath>       
+    </t>
+</templates>
