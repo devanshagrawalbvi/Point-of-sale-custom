@@ -4,13 +4,13 @@
     <t t-name="pos_task.CustomerNotePopup" owl="1">  
         <div class="popup cash-move-popup">
 
-                <!-- Popup heading and body -->
+            <!-- Popup heading and body -->
 
             <div class="body input-amount">  
                 <b>Customer Order Note </b><br/><hr/><input t-ref="note" t-model = "state_p.order_note_" type="text" placeholder="Order Note for seller" style="border:1px solid; width:100%; outline:None"/>
             </div>
 
-                <!-- Popup Footer    -->
+            <!-- Popup Footer    -->
    
             <footer class="footer centered">
                 <div class="button confirm disable highlight dynamic-size" t-on-click="confirm">

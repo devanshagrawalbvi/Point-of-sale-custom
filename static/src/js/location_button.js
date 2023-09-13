@@ -54,4 +54,3 @@ odoo.define("point_of_sale.LocationSelection", function (require) {
 
   return LocationSelection;
 });
-// SetlocationButton

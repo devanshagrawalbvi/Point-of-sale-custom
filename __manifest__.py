@@ -2,7 +2,6 @@
     'name': 'POS_Task',
     'version': '1.0',
     'category': 'Apps',
-    # 'website': 'www.google.com',
     'author': 'Devansh Agrawal',
     'depends': ['base','point_of_sale'],
     'data': [

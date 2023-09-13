@@ -37,17 +37,14 @@ odoo.define("pos_order.inherit", function (require) {
         }
       }
 
-      // Code for showing popup if product is out of stock
-      // Called when we click product 
+      // Code for showing notification if product is out of stock
+      // Called when we click product
 
       async _clickProduct(event) {
-        if (event.detail.qty_available < 0) {
-          return this.showNotification(
-            _.str.sprintf(
-              this.env._t("Out of stock")
-            ),
-            1000
-          );
+        console.log(event.detail.display_name)
+        const productName = event.detail.display_name
+        if (event.detail.qty_available <= 0) {
+          return this.showNotification((productName + " is Out of Stock"), 1000);
         } else {
           super._clickProduct(...arguments);
         }

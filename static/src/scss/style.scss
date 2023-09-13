@@ -20,10 +20,20 @@
 }
 
 .product:hover{
-    border: 2px solid red;
+    border: 1px solid red;
     transform:scale(0.98);
 }
 
-.add{
-    
+.price-tag{
+    color: peru !important;
+    font-size: medium;
+}
+
+.product-name{
+    font-size: 12px;
+}
+
+.pos .control-button:hover{
+    background-color:lightgreen !important;
+    color: white;
 }

@@ -4,7 +4,6 @@ odoo.define('point_of_sale.LocationSelectionPopup', function (require) {
   const AbstractAwaitablePopup = require('point_of_sale.AbstractAwaitablePopup');
   const Registries = require('point_of_sale.Registries');
   const { Order } = require("point_of_sale.models");
-
   const { useState } = owl
 
   class LocationSelectionPopup extends AbstractAwaitablePopup {
